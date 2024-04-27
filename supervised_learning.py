@@ -74,3 +74,12 @@ mae = mean_absolute_error(y_test, y_pred)
 #Prints the mean squared error and mean absolute error
 print("Mean Squared Error:", mse)
 print("Mean Absolute Error:", mae)
+
+plt.figure(figsize=(10, 6))
+plt.scatter(y_test, y_pred, color='green')
+plt.plot([y_test.min(), y_test.max()], [y_test.min(), y_test.max()], '--k', lw=2)  # Plotting the diagonal line
+plt.title('Model Predictions vs Actual Values')
+plt.xlabel('Actual Total Fantasy Points (TTL)')
+plt.ylabel('Predicted Total Fantasy Points (TTL)')
+plt.grid(True)
+plt.show()
